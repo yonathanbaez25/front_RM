@@ -1,0 +1,33 @@
+div {
+  color: white;
+}
+
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.linkedin {
+  background-color: darkgreen;
+  color: white;
+  font-size: 18px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.container {
+  width: 800px;
+  display: grid;
+  place-items: center;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 50px;
+  border-radius: 15px;
+}
