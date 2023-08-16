@@ -18,7 +18,7 @@ function App() {
 
   async function login(userData) {
     const { email, password } = userData;
-    const URL = "http://localhost:3001/rickandmorty/login/";
+    const URL = "/rickandmorty/login/";
 
     try {
       const { data } = await axios.get(
@@ -38,9 +38,7 @@ function App() {
 
   const onSearch = async (id) => {
     try {
-      const { data } = await axios.get(
-        `http://localhost:3001/rickandmorty/character/${id}`
-      );
+      const { data } = await axios.get(`/rickandmorty/character/${id}`);
       if (data.name) {
         setCharacters((oldChars) => [...oldChars, data]);
       } else {
