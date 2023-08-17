@@ -22,7 +22,7 @@ function App() {
 
     try {
       const { data } = await axios.get(
-        `/rickandmorty/login/?email=${email}&password=${password}`
+        `back-rm-production.up.railway.app/rickandmorty/login/?email=${email}&password=${password}`
       );
       const { access } = data;
       setAccess(data);
