@@ -18,11 +18,11 @@ function App() {
 
   async function login(userData) {
     const { email, password } = userData;
-    const URL = "/rickandmorty/login";
+    //const URL = "/rickandmorty/login/";
 
     try {
       const { data } = await axios.get(
-        URL + `?email=${email}&password=${password}`
+        `/rickandmorty/login/?email=${email}&password=${password}`
       );
       const { access } = data;
       setAccess(data);
