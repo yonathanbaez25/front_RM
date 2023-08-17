@@ -23,7 +23,7 @@ function App() {
 
     try {
       const { data } = await axios.get(
-        `back-rm-production.up.railway.app/rickandmorty/login/?email=${email}&password=${password}`
+        `https://back-rm-production.up.railway.app/rickandmorty/login/?email=${email}&password=${password}`
       );
       const { access } = data;
       setAccess(data);
@@ -40,7 +40,7 @@ function App() {
   const onSearch = async (id) => {
     try {
       const { data } = await axios.get(
-        `back-rm-production.up.railway.app/rickandmorty/character/${id}`
+        `https://back-rm-production.up.railway.app/rickandmorty/character/${id}`
       );
       if (data.name) {
         setCharacters((oldChars) => [...oldChars, data]);
