@@ -38,7 +38,9 @@ function App() {
 
   const onSearch = async (id) => {
     try {
-      const { data } = await axios.get(`/rickandmorty/character/${id}`);
+      const { data } = await axios.get(
+        `back-rm-production.up.railway.app/rickandmorty/character/${id}`
+      );
       if (data.name) {
         setCharacters((oldChars) => [...oldChars, data]);
       } else {
