@@ -9,15 +9,15 @@ export default function Detail(props) {
   const [character, setCharacter] = useState({});
 
   useEffect(() => {
-    axios(`http://localhost:3001/rickandmorty/character/${id}`).then(
-      ({ data }) => {
-        if (data.name) {
-          setCharacter(data);
-        } else {
-          window.alert("No hay personajes con ese ID");
-        }
+    axios(
+      `https://back-rm-production.up.railway.app/rickandmorty/character/${id}`
+    ).then(({ data }) => {
+      if (data.name) {
+        setCharacter(data);
+      } else {
+        window.alert("No hay personajes con ese ID");
       }
-    );
+    });
     return setCharacter({});
   }, [id]);
 
